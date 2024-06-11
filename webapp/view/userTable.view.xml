@@ -1,0 +1,44 @@
+<mvc:View controllerName="test.application.controller.userTable"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:c="sap.ui.core" displayBlock="true" height="100%" busyIndicatorDelay="0">
+    <Page title="Customer Details" alternateRowColors="true" showNavButton="true" navButtonPress=".onNavBack">
+        <ScrollContainer >
+
+            <SearchField width="50%" placeholder="Search CompanyName" search=".onSearch" />
+            <Table id="table1" items="{/Customers/}">
+                <columns>
+                    <Column >
+                        <Text text="CustomerID" />
+                    </Column>
+
+                    <Column >
+                        <Text text="CompanyName" />
+                    </Column>
+
+                    <Column >
+                        <Text text="ContactName" />
+                    </Column>
+
+                    <Column >
+                        <Text text="ContactTitle" />
+                    </Column>
+                </columns>
+
+                <items>
+                    <ColumnListItem type="Navigation" press="tableItemPressed">
+                        <cells>
+                            <Text text="{CustomerID}" />
+                            <Text text="{CompanyName}" />
+                            <Text text="{ContactName}" />
+                            <Text text="{ContactTitle}" />
+                        </cells>
+
+                    </ColumnListItem>
+
+                </items>
+            </Table>
+
+        </ScrollContainer>
+    </Page>
+</mvc:View>

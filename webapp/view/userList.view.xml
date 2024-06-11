@@ -1,0 +1,26 @@
+<mvc:View
+	controllerName="test.application.controller.userList"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+    xmlns:table="sap.ui.table"
+	displayBlock="true"
+	height="100%"
+	busyIndicatorDelay="0"
+>
+    <Page title="User Info" showNavButton="true" navButtonPress=".onNavBack">
+        <ScrollContainer >
+            <List items="{path:'/'}">
+                <items>
+                    <ObjectListItem
+                            type="Navigation"
+                            press=".onListItemPress"
+                            title="{first_name} {last_name}"
+                            icon="{avatar}"
+                            intro="{email}"
+                            number="{id}"/>
+                </items>
+            </List>
+        </ScrollContainer>
+    </Page>
+</mvc:View>

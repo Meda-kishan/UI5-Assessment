@@ -1,0 +1,18 @@
+<mvc:View controllerName="test.application.controller.home"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="Users Information">
+        <content>
+            <!-- <Text text="hellooo" /> -->
+            <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Users in the List Form" subheader="Personal info" press="onListPress" frameType= "TwoByHalf">
+                <TileContent unit="EUR" footer="Current Quarter">
+                </TileContent>
+            </GenericTile>
+
+            <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Users in the Table Form" subheader="Customers Data" press="onTablePress" frameType= "TwoByHalf">
+                <TileContent unit="EUR" footer="Current Quarter">
+                </TileContent>
+            </GenericTile>
+        </content>
+    </Page>
+</mvc:View>

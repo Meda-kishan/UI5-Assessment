@@ -1,0 +1,23 @@
+<c:FragmentDefinition xmlns="sap.m"
+    xmlns:c="sap.ui.core">
+
+    <Dialog id="dialog2" title="{itemModel>/first_name} {itemModel>/last_name}">
+        <content>
+            <HBox class="sapUiSmallMargin">
+                <VBox class="sapUiSmallMargin">
+                    <Text text="Id : {itemModel>/id}" />
+
+                    <Text text="Name: {itemModel>/first_name} {itemModel>/last_name}"/>
+                    
+                    <Text text="Email : {itemModel>/email}" />
+                </VBox>
+                <Image src="{itemModel>/avatar}" />
+            </HBox>
+        </content>
+
+        <beginButton>
+            <Button text="Close" press=".onCloseDialog"/>
+        </beginButton>
+    </Dialog>
+
+</c:FragmentDefinition>
